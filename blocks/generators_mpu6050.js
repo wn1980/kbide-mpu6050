@@ -8,12 +8,18 @@ Blockly.JavaScript['mpu6050_begin'] = function(block) {
     #include <MPU6050_tockn.h>
 #END
 #VARIABLE
-MPU6050 __mpu6050(Wire);
+MPU6050 __mpu6050(Wire1);
 #END
-Wire.begin(${value_pin_sda},${value_pin_scl});
+//Wire1.begin(${value_pin_sda},${value_pin_scl});
+Wire1.begin();
 __mpu6050.begin();
 __mpu6050.calcGyroOffsets(true);
 `;
+  return code;
+};
+
+Blockly.JavaScript['mpu6050_update'] = function(block) {
+  var code = `__mpu6050.update();\n`;
   return code;
 };
 

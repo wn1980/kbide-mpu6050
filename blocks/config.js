@@ -18,7 +18,8 @@
                         </value>
                     </block>`
             }, 
-			"mpu6050_get_acc_x", 
+			"mpu6050_update", 
+			"mpu6050_get_acc_x",
 			"mpu6050_get_acc_y", 
 			"mpu6050_get_acc_z", 
 			"mpu6050_get_gyro_x", 
